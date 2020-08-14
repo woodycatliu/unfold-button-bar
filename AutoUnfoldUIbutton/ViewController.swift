@@ -25,7 +25,7 @@ class ViewController: UIViewController {
     
     
     
-    var testView: UIView = UnfoldButton(orgin: CGPoint(x: 300, y: 300))
+    var reuseable: UIView = UnfoldButton(orgin: CGPoint(x: 300, y: 300))
     
     var point: CGPoint!
     
@@ -36,6 +36,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.firstButton.addTarget(self, action: #selector(firstAction), for: .touchUpInside)
+        self.view.addSubview(reuseable)
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
